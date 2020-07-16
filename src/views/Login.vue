@@ -1,10 +1,31 @@
 <template>
-  <div>login</div>
+  <div>
+    <nav-bar class="navBar-login" title left-text left-arrow @click-left="onClickLeft" />
+  
+  </div>
 </template>
 
 <script>
-export default {};
+import { NavBar } from "vant";
+export default {
+  components: {
+    NavBar
+  },
+  methods: {
+    onClickLeft() {}
+  }
+};
 </script>
 
-<style>
+<style lang="less">
+.navBar-login {
+  background: transparent !important;
+  .van-icon {
+    color: #fff;
+    font-size: .24rem;
+  }
+  &:after {
+    border: unset !important;
+  }
+}
 </style>
